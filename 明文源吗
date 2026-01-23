@@ -6366,3 +6366,12 @@
         }));
         return Array.from(results);
     }
+	const customHomepageUrl = 'https://global.cctv.com/';
+function handleRootPath() {
+  if (customHomepageUrl) {
+    console.log(`跳转到自定义首页: ${customHomepageUrl}`);
+  } else {
+    console.log('显示默认终端页面');
+  }
+}
+handleRootPath();
