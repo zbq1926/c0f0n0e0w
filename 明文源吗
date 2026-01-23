@@ -7,7 +7,7 @@
     let enableSocksDowngrade = false;
     let disableNonTLS = false;
     let disablePreferred = false;
-    let homepage = 'https://global.cctv.com/';
+
     let enableRegionMatching = true;
     let currentWorkerRegion = '';
     let manualWorkerRegion = '';
@@ -684,7 +684,7 @@
                     
                     if (url.pathname === '/') {
                         // 检查是否有自定义首页URL配置
-                        const customHomepage = getConfigValue('homepage', env.homepage || env.HOMEPAGE);
+                        const customHomepage = getConfigValue('homepage', env.homepage || env.HOMEPAGE || 'https://global.cctv.com/');
                         if (customHomepage && customHomepage.trim()) {
                             try {
                                 // 从自定义URL获取内容
